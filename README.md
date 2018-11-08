@@ -74,13 +74,12 @@ Once we were done tuning the CNN, we took the output from the Flatten layer and 
 
 ## I Had A Bad Idea -- Thanks Kelly
 
-<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/I had a bad idea.png"></img>
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/I had a bad idea.png" width="100%"></img>
 
 We decided to come up with a sentance and have our model read it... It ended up being a bad idea. 
-The model we used was 
+The model we used was based on the small dataset.. maybe it'll work better wit the large dataset. 
 
 ### Sentence Prediction
 #### D DBE A GAD DDCA
 
 
-## Future Work
