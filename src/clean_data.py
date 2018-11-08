@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
-        directory = f'../large/{letter}/'
+        directory = f'../large/validation/{letter}/'
         files = os.listdir(directory)
         label = np.array([0]*10)
         label[i] = 1
