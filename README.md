@@ -103,7 +103,10 @@ Used ResNet50 trained on ImageNet predictions on DefinitelyNotMNIST images into 
 We decided to come up with a sentance and have our model read it... It ended up being a bad idea. 
 The model we used was based on the small dataset.. maybe it'll work better wit the large dataset. 
 
-### Sentence Prediction
+### Small Dataset Sentence Prediction
 #### D DBE A GAD DDCA
+
+### Large Dataset Sentence Prediction
+#### D HAD A BAD IDED
 
 
