@@ -25,6 +25,9 @@ The model head was initially trained over 5 epochs and then additional layers we
 
 ### Results
 
-## Ransom Letter Translation 
+## I Had a Bad Idea -- Thanks Kelly
+
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/I had a bad idea.png"></img>
+
 
 ## Future Work
