@@ -15,6 +15,16 @@ There were two datasets: a small dataset and a large dataset. The small dataset 
 
 <img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/cnn.png"></img>
 
+1. Convolution
+2. Maxpool
+3. Convolution
+4. Maxpool
+5. Convolution
+6. Maxpool
+7. Flatten
+8. Dense
+9. Dropout
+10. Softmax Activation
 
 ### Results
 
@@ -28,6 +38,8 @@ Epoch 2/4
 Epoch 3/4
 13106/13106 loss: 0.3653 - acc: 0.8521 - val_loss: 0.5153 - val_acc: 0.8311
 
+Epoch 4/4
+13106/13106 loss: 0.3327 - acc: 0.8644 - val_loss: 0.5263 - val_acc: 0.8372
 
 #### Large Dataset
 
