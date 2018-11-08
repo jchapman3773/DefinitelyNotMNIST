@@ -1,5 +1,8 @@
 # Definitely Not MNIST
 
+##
+Team: Millie, Julia, TJ
+
 <img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/sample_letters.png"></img>
 
 ## Overview
@@ -18,16 +21,9 @@ There were two datasets: a small dataset and a large dataset. The small dataset 
 
 #### Small Dataset
 Epoch 1/4
-1310/1310 loss: 1.1496 - acc: 0.5975 - val_loss: 0.6673 - val_acc: 0.7483
-
+13106/13106 loss: 0.5870 - acc: 0.7774 - val_loss: 0.4741 - val_acc: 0.8170
 Epoch 2/4
-1310/1310 loss: 0.7729 - acc: 0.7274 - val_loss: 0.5691 - val_acc: 0.7816
-
-Epoch 3/4
-1310/1310 loss: 0.6777 - acc: 0.7535 - val_loss: 0.5587 - val_acc: 0.7805
-
-Epoch 4/4
-1310/1310 loss: 0.6548 - acc: 0.7592 - val_loss: 0.5466 - val_acc: 0.7805
+13106/13106 loss: 0.4193 - acc: 0.8321 - val_loss: 0.5086 - val_acc: 0.8229
 
 
 #### Large Dataset
@@ -41,6 +37,12 @@ Epoch 2/4
 Epoch 3/4
 9232/9232 loss: 0.6440 - acc: 0.7741 - val_loss: 0.5599 - val_acc: 0.7954
 
+Epoch 4/4
+9232/9232 loss: 0.6175 - acc: 0.7868 - val_loss: 0.5319 - val_acc: 0.8091
+
+### Random Forest
+
+Once we were done tuning the CNN, we took the output from the Flatten layer and fed the data into a Random Forest. However, the accuarcy score was lower than our initial accuarcy with the CNN. 
 
 ## Transfer Learning
 
@@ -72,15 +74,12 @@ Epoch 6/10
 Epoch 7/10
 265/265 loss: 0.3779 - acc: 0.9255 - val_loss: 1.6321 - val_acc: 0.7480
 
-### Random Forest
-
-Once we were done tuning the CNN, we took the output from the Flatten layer and fed the data into a Random Forest. However, the accuarcy score was lower than our initial accuarcy with the CNN. 
 
 ## Feature Extraction
 
 Used ResNet50 trained on ImageNet predictions on DefinitelyNotMNIST images into NMF with 10 components.
 
-<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/julia/src/top_images.png"></img>
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/julia/src/top_images_10.png"></img>
 
 ## I Had A Bad Idea -- Thanks Kelly
 
