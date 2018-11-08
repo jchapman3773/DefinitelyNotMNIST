@@ -64,6 +64,14 @@ Epoch 2/10
 Epoch 3/10
 265/265 loss: 0.5228 - acc: 0.8952 - val_loss: 1.5174 - val_acc: 0.7568
 
+...
+
+Epoch 6/10
+265/265 loss: 0.4463 - acc: 0.9153 - val_loss: 0.6321 - val_acc: 0.8407
+
+Epoch 7/10
+265/265 loss: 0.3779 - acc: 0.9255 - val_loss: 1.6321 - val_acc: 0.7480
+
 ### Random Forest
 
 Once we were done tuning the CNN, we took the output from the Flatten layer and fed the data into a Random Forest. However, the accuarcy score was lower than our initial accuarcy with the CNN. 
