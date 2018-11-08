@@ -54,6 +54,10 @@ Epoch 2/10
 Epoch 3/10
 265/265 loss: 0.5228 - acc: 0.8952 - val_loss: 1.5174 - val_acc: 0.7568
 
+## Feature Extraction
+
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/julia/src/top_images.png"></img>
+
 ## I Had A Bad Idea -- Thanks Kelly
 
 <img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/I had a bad idea.png"></img>
