@@ -54,7 +54,7 @@ for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
     files = os.listdir(directory)
     label = np.array([0]*10)
     label[i] = 1
-    for idx,file in enumerate(files[:10]):
+    for idx,file in enumerate(files[:500]):
         img = image.load_img(directory+file, target_size=(224, 224))
         img_data = image.img_to_array(img)
         img_data = np.expand_dims(img_data, axis=0)
@@ -64,9 +64,9 @@ for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
         resnet_feature_np = np.array(resnet_feature)
         resnet_feature_list.append(resnet_feature_np.flatten())
         file_paths.append(directory+file)
-        # if idx%1 == 0:
-            # print(f'{idx}: {directory+file}')
-        print(directory+file)
+        if idx%10 == 0:
+            print(f'{idx}: {directory+file}')
+        # print(directory+file)
 
 resnet_feature_list_np = np.array(resnet_feature_list)
 nmf_model = NMF(n_components=10, random_state=42).fit(resnet_feature_list_np)
@@ -87,7 +87,7 @@ for idx1,row in enumerate(feat_idx):
         axes[idx1][idx2].get_yaxis().set_visible(False)
 
 plt.tight_layout()
-plt.savefig('top_images_10.png')
+plt.savefig('top_images_1000.png')
 plt.show()
 
 # def plot_gallery(title, images, n_col=n_col, n_row=n_row, cmap=plt.cm.gray):
