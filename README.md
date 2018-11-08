@@ -1,9 +1,8 @@
 # Definitely Not MNIST
 
-##
-Team: Millie, Julia, TJ
-
 <img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/sample_letters.png"></img>
+## The Squad
+Millie, Julia, TJ
 
 ## Overview
 Data consist of images of the letters A-J (10 classes) written in a variety of (unusual!) fonts. Image size is 28 x 28.
