@@ -25,13 +25,19 @@ Zoom and shear were applied to the training data.
 The model head was initially trained over 5 epochs and then additional layers were unlocked for training over 10 additional epochs.
 
 ### Results
+Training accuracy and loss (categorical cross entropy) improved from Epoch to epoch. However, loss for the validation set was unstable.
 
-## I Had A Bad Idea -- Thanks Kelly
+Epoch 1/10
+265/265 [==============================] - 610s 2s/step - loss: 1.0246 - acc: 0.7254 - val_loss: 5.7956 - val_acc: 0.4986
 
-<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/I had a bad idea.png"></img>
+Epoch 00001: val_loss did not improve from 2.61760
+Epoch 2/10
+265/265 [==============================] - 609s 2s/step - loss: 0.5908 - acc: 0.8773 - val_loss: 0.9881 - val_acc: 0.7433
 
-We decided to predict each letter in our well crafted sentance using our Convolutional Nueral Network trained on our small dataset.. 
+Epoch 00002: val_loss improved from 2.61760 to 0.98808, saving model to /tmp/weights.hdf5
+Epoch 3/10
+265/265 [==============================] - 608s 2s/step - loss: 0.5228 - acc: 0.8952 - val_loss: 1.5174 - val_acc: 0.7568
 
-### D DBE A GAD DDCA
+## Ransom Letter Translation 
 
 ## Future Work
