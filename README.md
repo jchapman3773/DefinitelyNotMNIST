@@ -21,6 +21,7 @@ There were two datasets: a small dataset and a large dataset. The small dataset 
 #### Small Dataset
 Epoch 1/4
 13106/13106 loss: 0.5870 - acc: 0.7774 - val_loss: 0.4741 - val_acc: 0.8170
+
 Epoch 2/4
 13106/13106 loss: 0.4193 - acc: 0.8321 - val_loss: 0.5086 - val_acc: 0.8229
 
