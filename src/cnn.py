@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential, load_model
 from keras.layers import Conv2D, MaxPooling2D
@@ -11,6 +10,7 @@ img_width, img_height = 28, 28
 
 train_data_dir = '../data/train'
 validation_data_dir = '../data/validation'
+
 nb_train_samples = 1116
 nb_validation_samples = 125
 epochs = 5
