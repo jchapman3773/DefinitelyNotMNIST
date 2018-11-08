@@ -10,7 +10,17 @@ import matplotlib.image as mpimg
 import keras
 import os
 import numpy as np
-
+import matplotlib as mpl
+mpl.rcParams.update({
+    'figure.figsize'      : (15,15),
+    'font.size'           : 20.0,
+    'axes.titlesize'      : 'large',
+    'axes.labelsize'      : 'medium',
+    'xtick.labelsize'     : 'medium',
+    'ytick.labelsize'     : 'medium',
+    'legend.fontsize'     : 'large',
+    'legend.loc'          : 'upper right'
+})
 
 # batch_size = 500
 # epochs = 5
@@ -71,8 +81,13 @@ fig,axes = plt.subplots(10,top_images)
 for idx1,row in enumerate(feat_idx):
     for idx2,img_idx in enumerate(row):
         axes[idx1][idx2].imshow(mpimg.imread(file_paths[img_idx]))
+        # axes[idx1][idx2].tick_params(axis='x',labelbottom='off')
+        # axes[idx1][idx2].tick_params(axis='y',labelbottom='off')
+        axes[idx1][idx2].get_xaxis().set_visible(False)
+        axes[idx1][idx2].get_yaxis().set_visible(False)
 
-plt.savefig('top_images.png')
+plt.tight_layout()
+plt.savefig('top_images_10.png')
 plt.show()
 
 # def plot_gallery(title, images, n_col=n_col, n_row=n_row, cmap=plt.cm.gray):
