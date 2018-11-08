@@ -5,12 +5,13 @@
 ## Overview
 Data consist of images of the letters A-J written in a variety of (unusual!) fonts. Image size is 28 x 28.
 
+There were two datasets: a small dataset and a large dataset. The small dataset consisted of 18724 images while the large dataset had 
 The data was split into training (13201 images) and validation (5523 images) sets.
 
 ## Convolutional Neural Network
 
 ### Structure
-
+We started by building a Convolutional Nueral Network to approach this problem. Our final model 
 ### Results
 
 ## Transfer Learning
