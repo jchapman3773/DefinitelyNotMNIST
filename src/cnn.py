@@ -8,13 +8,13 @@ from keras import backend as K
 # dimensions of our images.
 img_width, img_height = 28, 28
 
-train_data_dir = '../large/train'
-validation_data_dir = '../large/validation'
+train_data_dir = '../data/train'
+validation_data_dir = '../data/validation'
 
-nb_train_samples = 461632
-nb_validation_samples = 112431
+nb_train_samples = 13106
+nb_validation_samples = 5618
 epochs = 4
-batch_size = 50
+batch_size = 1
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -72,4 +72,4 @@ model.fit_generator(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
 
-model.save('notMNIST_lar_large.h5')
+model.save('notMNIST_lar_small.h5')
