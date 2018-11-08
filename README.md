@@ -32,6 +32,16 @@ Epoch 4/4
 
 #### Large Dataset
 
+Epoch 1/4
+9232/9232 loss: 0.8156 - acc: 0.7119 - val_loss: 0.6174 - val_acc: 0.7642
+
+Epoch 2/4
+9232/9232 loss: 0.6821 - acc: 0.7570 - val_loss: 0.5752 - val_acc: 0.7912
+
+Epoch 3/4
+9232/9232 loss: 0.6440 - acc: 0.7741 - val_loss: 0.5599 - val_acc: 0.7954
+
+
 ## Transfer Learning
 
 ### Structure
