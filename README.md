@@ -78,6 +78,8 @@ Once we were done tuning the CNN, we took the output from the Flatten layer and 
 
 ## Feature Extraction
 
+Used ResNet50 trained on ImageNet predictions on DefinitelyNotMNIST images into NMF with 10 components.
+
 <img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/julia/src/top_images.png"></img>
 
 ## I Had A Bad Idea -- Thanks Kelly
