@@ -3,15 +3,30 @@
 <img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/sample_letters.png"></img>
 
 ## Overview
-Data consist of images of the letters A-J written in a variety of (unusual!) fonts. Image size is 28 x 28.
+Data consist of images of the letters A-J (10 classes) written in a variety of (unusual!) fonts. Image size is 28 x 28.
 
 There were two datasets: a small dataset and a large dataset. The small dataset consisted of 18724 images while the large dataset had over half a million. We split the data into a training set and a validation set for both small and large sets of images.
 
 ## Convolutional Neural Network
 
 ### Structure
-We started by building a Convolutional Nueral Network to approach this problem. Our final model 
+
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/cnn.png"></img>
+
+
 ### Results
+
+#### Small Dataset
+Epoch 1/4
+1310/1310 loss: 1.1496 - acc: 0.5975 - val_loss: 0.6673 - val_acc: 0.7483
+Epoch 2/4
+1310/1310 loss: 0.7729 - acc: 0.7274 - val_loss: 0.5691 - val_acc: 0.7816
+Epoch 3/4
+1310/1310 loss: 0.6777 - acc: 0.7535 - val_loss: 0.5587 - val_acc: 0.7805
+Epoch 4/4
+1310/1310 loss: 0.6548 - acc: 0.7592 - val_loss: 0.5466 - val_acc: 0.7805
+
+#### Large Dataset
 
 ## Transfer Learning
 
