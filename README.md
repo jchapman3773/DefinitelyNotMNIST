@@ -6,9 +6,13 @@
 
 ## Convolutional Neural Network
 
+### Structure
+
 ### Results
 
 ## Transfer Learning
+
+### Structure
 
 ### Results
 

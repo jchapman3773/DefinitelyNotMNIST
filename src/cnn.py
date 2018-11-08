@@ -11,10 +11,10 @@ img_width, img_height = 28, 28
 train_data_dir = '../data/train'
 validation_data_dir = '../data/validation'
 
-nb_train_samples = 1116
-nb_validation_samples = 125
-epochs = 5
-batch_size = 5
+nb_train_samples = 13106
+nb_validation_samples = 5620
+epochs = 4
+batch_size = 25
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -38,22 +38,19 @@ model.add(Flatten())
 model.add(Dense(64))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
-model.add(Dense(6))
-model.add(Activation('sigmoid'))
+model.add(Dense(10))
+model.add(Activation('softmax'))
 
 model.compile(loss='categorical_crossentropy',
-              optimizer='rmsprop',
+              optimizer='adam',
               metrics=['accuracy'])
 
-# this is the augmentation configuration we will use for training
 train_datagen = ImageDataGenerator(
     rescale=1. / 255,
     shear_range=0.2,
     zoom_range=0.2,
-    horizontal_flip=True)
+    rotation_range=10)
 
-# this is the augmentation configuration we will use for testing:
-# only rescaling
 test_datagen = ImageDataGenerator(rescale=1. / 255)
 
 train_generator = train_datagen.flow_from_directory(
@@ -70,9 +67,9 @@ validation_generator = test_datagen.flow_from_directory(
 
 model.fit_generator(
     train_generator,
-    steps_per_epoch=nb_train_samples // batch_size,
+    steps_per_epoch=nb_train_samples,
     epochs=epochs,
     validation_data=validation_generator,
-    validation_steps=nb_validation_samples // batch_size)
+    validation_steps=nb_validation_samples)
 
-model.save_weights('beard.h5')
+model.save('notMNIST_lar_large.h5')
