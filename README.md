@@ -25,6 +25,9 @@ Epoch 1/4
 Epoch 2/4
 13106/13106 loss: 0.4193 - acc: 0.8321 - val_loss: 0.5086 - val_acc: 0.8229
 
+Epoch 3/4
+13106/13106 loss: 0.3653 - acc: 0.8521 - val_loss: 0.5153 - val_acc: 0.8311
+
 
 #### Large Dataset
 
