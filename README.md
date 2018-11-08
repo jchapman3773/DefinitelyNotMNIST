@@ -5,8 +5,7 @@
 ## Overview
 Data consist of images of the letters A-J written in a variety of (unusual!) fonts. Image size is 28 x 28.
 
-There were two datasets: a small dataset and a large dataset. The small dataset consisted of 18724 images while the large dataset had 
-The data was split into training (13201 images) and validation (5523 images) sets.
+There were two datasets: a small dataset and a large dataset. The small dataset consisted of 18724 images while the large dataset had over half a million. We split the data into a training set and a validation set for both small and large sets of images.
 
 ## Convolutional Neural Network
 
@@ -38,8 +37,13 @@ Epoch 3/10
 
 ## I Had A Bad Idea -- Thanks Kelly
 
-<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/sample_letters.png"></img>
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/case-study/graphics/I had a bad idea.png"></img>
 
-### D DBE A GAD DDCA
+We decided to come up with a sentance and have our model read it... It ended up being a bad idea. 
+The model we used was 
+
+### Sentence Prediction
+#### D DBE A GAD DDCA
+
 
 ## Future Work
