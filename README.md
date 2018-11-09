@@ -94,7 +94,7 @@ Epoch 7/10
 
 Used ResNet50 trained on ImageNet predictions on DefinitelyNotMNIST images into NMF with 10 components.
 
-<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/julia/src/top_images_10.png"></img>
+<img src="https://github.com/tdurnford/DefinitelyNotMNIST/blob/julia/src/top_images_500.png"></img>
 
 ## I Had A Bad Idea -- Thanks Kelly
 
