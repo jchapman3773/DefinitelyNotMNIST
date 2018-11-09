@@ -27,7 +27,7 @@ def train_val_holdout_split_images(root_path, train_ratio  = 0.7, validation_rat
             ext = name.split('.')[-1]
             if ext in ['jpg','png']:
 
-               # Image.open(directory + file)
+               Image.open(directory + file)
                current_path = os.path.join(root, name)
                root_dir, category = os.path.split(root)
                val_split_dir = choice ([train_folder, validation_folder, holdout_folder], 1, p =[train_ratio, validation_ratio, holdout_ratio])[0]
