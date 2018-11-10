@@ -50,7 +50,7 @@ resnet_feature_list = []
 file_paths = []
 
 for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
-    directory = f'../data/train/{letter}/'
+    directory = f'../data/small/train/{letter}/'
     files = os.listdir(directory)
     label = np.array([0]*10)
     label[i] = 1
@@ -87,7 +87,7 @@ for idx1,row in enumerate(feat_idx):
         axes[idx1][idx2].get_yaxis().set_visible(False)
 
 plt.tight_layout()
-plt.savefig('top_images_1000.png')
+plt.savefig('top_images_500_test.png')
 plt.show()
 
 # def plot_gallery(title, images, n_col=n_col, n_row=n_row, cmap=plt.cm.gray):

@@ -18,9 +18,9 @@ def train_val_holdout_split_images(root_path, train_ratio  = 0.7, validation_rat
         None
         """
 
-    train_folder      = root_path + '/large/train'
-    validation_folder = root_path +'/large/validation'
-    holdout_folder    = root_path +'/large/holdout'
+    train_folder      = root_path + '/train'
+    validation_folder = root_path +'/validation'
+    holdout_folder    = root_path +'/holdout'
 
     for root, dirs, files in os.walk(root_path, topdown=False):
         for name in files:
@@ -39,4 +39,4 @@ def train_val_holdout_split_images(root_path, train_ratio  = 0.7, validation_rat
                cv2.imwrite(new_path, o_img)
                print(new_path)
 
-train_val_holdout_split_images('..')
+train_val_holdout_split_images('../data/large')
