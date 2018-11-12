@@ -54,7 +54,7 @@ for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
     files = os.listdir(directory)
     label = np.array([0]*10)
     label[i] = 1
-    for idx,file in enumerate(files[:500]):
+    for idx,file in enumerate(files):
         img = image.load_img(directory+file, target_size=(224, 224))
         img_data = image.img_to_array(img)
         img_data = np.expand_dims(img_data, axis=0)
@@ -77,7 +77,7 @@ top_images = 10
 feat_idx = []
 for class_num in range(10):
     feat_idx.append(np.argsort(nmf_w[:,class_num])[::-1][:top_images])
-fig,axes = plt.subplots(10,top_images)
+fig, axes = plt.subplots(10,top_images)
 for idx1,row in enumerate(feat_idx):
     for idx2,img_idx in enumerate(row):
         axes[idx1][idx2].imshow(mpimg.imread(file_paths[img_idx]))
@@ -87,7 +87,7 @@ for idx1,row in enumerate(feat_idx):
         axes[idx1][idx2].get_yaxis().set_visible(False)
 
 plt.tight_layout()
-plt.savefig('top_images_500_test.png')
+plt.savefig('top_images_small.png')
 plt.show()
 
 # def plot_gallery(title, images, n_col=n_col, n_row=n_row, cmap=plt.cm.gray):
