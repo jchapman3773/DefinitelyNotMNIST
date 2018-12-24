@@ -1,3 +1,9 @@
+import os
+import matplotlib as mpl
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    mpl.use('Agg')
+import matplotlib.pyplot as plt
 from keras.applications.resnet50 import ResNet50
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
@@ -10,7 +16,6 @@ import matplotlib.image as mpimg
 import keras
 import os
 import numpy as np
-import matplotlib as mpl
 mpl.rcParams.update({
     'figure.figsize'      : (15,15),
     'font.size'           : 20.0,
@@ -50,7 +55,7 @@ resnet_feature_list = []
 file_paths = []
 
 for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
-    directory = f'../data/small/train/{letter}/'
+    directory = f'../data/large/train/{letter}/'
     files = os.listdir(directory)
     label = np.array([0]*10)
     label[i] = 1
@@ -64,7 +69,7 @@ for i, letter in enumerate(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']):
         resnet_feature_np = np.array(resnet_feature)
         resnet_feature_list.append(resnet_feature_np.flatten())
         file_paths.append(directory+file)
-        if idx%10 == 0:
+        if idx%50 == 0:
             print(f'{idx}: {directory+file}')
         # print(directory+file)
 
@@ -87,7 +92,7 @@ for idx1,row in enumerate(feat_idx):
         axes[idx1][idx2].get_yaxis().set_visible(False)
 
 plt.tight_layout()
-plt.savefig('top_images_small.png')
+plt.savefig('../graphics/top_images_large.png')
 plt.show()
 
 # def plot_gallery(title, images, n_col=n_col, n_row=n_row, cmap=plt.cm.gray):
